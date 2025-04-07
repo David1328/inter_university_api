@@ -1,0 +1,87 @@
+## .NET Core
+bin/
+obj/
+out/
+
+## Rider
+.idea/
+
+## Visual Studio
+.vs/
+.vscode/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## Build results
+*.dll
+*.exe
+*.app
+*.log
+
+## ASP.NET Core
+appsettings.Development.json
+appsettings.Local.json
+appsettings.*.json
+secrets.json
+
+## User-specific files
+*.rsuser
+*.suo
+*.user
+*.userprefs
+
+## NuGet
+*.nupkg
+*.snupkg
+*.nuspec
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+## Others
+*.cache
+*.dbmdl
+*.bak
+*.orig
+*.tmp
+
+# dotCover
+.idea/.dotCover
+
+# JetBrains Rider
+.idea/
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# VS for Mac
+.vscode/
+*.pidb
+*.userprefs
+*.csproj.user
+*.sln.docstates
+
+# Logs
+*.log
+Logs/
+
+# Coverage reports
+coverage/
+coverage*.json
+lcov.info
+*.lcov
+
+# Test results
+TestResults/
+*.trx
+*.coverage
+*.coveragexml
