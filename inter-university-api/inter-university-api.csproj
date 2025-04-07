@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\Studet\" />
+    <Folder Include="Scripts_database\" />
   </ItemGroup>
 
 </Project>

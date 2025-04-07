@@ -5,7 +5,7 @@ namespace inter_university_api.Models.Dtos
     public class Login
     {
         [Key]
-        public int Id { get; set; } // Esta será la Primary Key
+        public int Id { get; set; }
         private long document;
         private int typeUser;
 

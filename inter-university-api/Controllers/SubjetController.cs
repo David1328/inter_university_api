@@ -123,27 +123,27 @@ namespace inter_university_api.Controllers
         /// <returns></returns>
         [HttpGet("GetClassParnerts/{documentStudent}")]
         [SwaggerOperation("Metodo para obtener los compañeros de clase de un estudiante por ID")]
-        public async Task<IActionResult> GetSubjetAsignated([FromRoute] long documentStudent)
+        public async Task<IActionResult> GetClassParnerts([FromRoute] long documentStudent)
         {
             interUniversityContext _dbActividadesContext = new interUniversityContext();
             AnswerAPI response = new AnswerAPI();
             try
             {
 
-                var registedSubjetsForStudent = await _dbActividadesContext
-                    .subjets
-                    .FromSqlRaw("EXEC [dbo].[sp_registedSubjet] @idStudent", new SqlParameter("@idStudent", documentStudent))
+                var partnersList = await _dbActividadesContext
+                    .ClassParnertsModel
+                    .FromSqlRaw("EXEC [dbo].[sp_GetClassmatesAndTeachers] @StudentId", new SqlParameter("@StudentId", documentStudent))
                     .ToListAsync();
-                if (registedSubjetsForStudent.Count > 0)
+                if (partnersList!=null&& partnersList.Count > 0)
                 {
                     response.Error = "";
                     response.Valido = true;
-                    response.data = registedSubjetsForStudent;
+                    response.data = partnersList;
                     return Ok(response);
                 }
                 else
                 {
-                    response.Error = "No tienes asiganturas registradas";
+                    response.Error = "No tienes compañeros de clase";
                     response.Valido = true;
                     response.data = "";
                     return StatusCode(404, response);

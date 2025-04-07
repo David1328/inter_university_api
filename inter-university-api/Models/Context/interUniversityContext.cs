@@ -37,7 +37,7 @@ namespace inter_university_api.Models.Context
         public virtual DbSet<Student> student { get; set; }
         public virtual DbSet<Subjet> subjets { get; set; }
         public virtual DbSet<ClassRegistration> ClassRegistrations { get; set; }
-
+        public virtual DbSet<ClassParnertsModel> ClassParnertsModel { get; set; }
         public virtual DbSet<Login> LoginModel { get; set; }
         #endregion
     }
